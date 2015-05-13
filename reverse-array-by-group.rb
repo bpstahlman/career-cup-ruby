@@ -14,8 +14,6 @@
 nums = ARGV.map { |v| v.to_i }
 gsize = nums.shift.to_i
 
-puts "group size = #{gsize}, nums: #{nums}"
-
 res = nums.inject([]) do |ary, val|
   ary.unshift val
   if ary.size % gsize == 0
@@ -30,4 +28,5 @@ res = nums.inject([]) do |ary, val|
 end
 
 puts "result: #{res}"
+
 # vim:ts=2:sw=2:et:tw=120
